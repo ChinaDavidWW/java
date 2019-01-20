@@ -1,0 +1,84 @@
+1  统计某个字符在目标字符串中出现的次数
+public class test{
+    public static void main(String[] args){
+    String str="李荣lir999ong4567899";
+    String c="9";
+    int j=0;
+//    char[] arr=str.toCharArray();
+        for(int i=0;i<str.length();i++){
+        String b =str.charAt(i)+"";
+        
+            if(b.equals(c)){
+            
+                j=j+1;
+            }
+        }
+    System.out.println(j);    
+    }
+}
+2  实现字符串逆序   字符串的旋转
+public class test{
+
+    public static void main(String[] args){
+    
+    String ss="abcdefg";
+    StringBuffer sb=new StringBuffer();
+        for(int i=ss.length()-1;i>=0;i--){    
+        sb.append(ss.charAt(i));        
+        }    
+    System.out.println(sb.toString());    
+    }
+}
+
+3  java去掉字符串中的特殊字符
+public class test{
+
+    public static void main(String[] args){
+    String str="123.456.78.56";
+    String[] arr= str.split("\\.");
+    
+    StringBuffer sb=new StringBuffer();
+        for(int i=0;i<arr.length;i++){
+        
+            sb.append(arr[i]);
+        }
+        System.out.println(sb.toString());
+    
+    }}
+    
+4  去除字符串中的重复字符
+public class test{
+
+    public static void main(String[] args){
+    String str="123.456.78.56";
+    String[] arr= str.split("\\.);
+    
+    StringBuffer sb=new StringBuffer();
+        for(int i=0;i<arr.length;i++){
+        
+            sb.append(arr[i]);
+        }
+        System.out.println(sb.toString());
+    
+    }}
+5  统计字符串中每个字符出现的次数
+public class test{
+
+    public static void main(String[] args){
+    String str="ssd1dfffgggg";
+        int len=str.length();
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+            for(int i=0;i<len;i++){
+            
+            String cc=str.charAt(i)+"";
+            Integer inte=map.get(cc);
+                if (inte==null){
+                map.put(cc,1);
+                }
+                else{
+                map.put(cc,inte.intValue()+1);
+                }                
+            }                
+        System.out.println(map);        
+    }}
+
