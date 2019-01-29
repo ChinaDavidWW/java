@@ -42,10 +42,10 @@ public class KafkaConsumerTest implements Runnable {
                 if (null != msgList && msgList.count() > 0) {
 
                     for (ConsumerRecord<String, String> record : msgList) {
-                        if (messageNo % 10 == 0) {
+                        if (messageNo > 0) {
                             System.out.println(messageNo + "=======receive: key = " + record.key() + ", value = " + record.value() + " offset===" + record.offset());
                         }
-                        if (messageNo % 50 == 0) {
+                        if (messageNo == 20) {
                             break;
                         }
                         messageNo++;

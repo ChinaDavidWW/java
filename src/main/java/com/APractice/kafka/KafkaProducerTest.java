@@ -32,12 +32,12 @@ public class KafkaProducerTest implements Runnable {
             for (; ; ) {
                 String messageStr = "你好，这是第" + messageNo + "条数据";
                 producer.send(new ProducerRecord<String, String>(topic, "Message", messageStr));
-                //生产了100条就打印
-                if (messageNo % 10 == 0) {
+                //生产了条就打印
+                if (messageNo > 1) {
                     System.out.println("发送的信息:" + messageStr);
                 }
-                //生产1000条就退出
-                if (messageNo % 50 == 0) {
+                //生产20条就退出
+                if (messageNo == 20) {
                     System.out.println("成功发送了" + messageNo + "条");
                     break;
                 }

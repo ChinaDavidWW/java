@@ -202,9 +202,8 @@
         <!--kafka dev env build begin-->
         <dependency>
             <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.12</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
+            <artifactId>kafka_2.10</artifactId>
+            <version>0.8.2-beta</version>
         </dependency>
 
         <dependency>
